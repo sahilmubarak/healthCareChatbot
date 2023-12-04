@@ -1,0 +1,90 @@
+[
+  {
+    "text": "let's go",
+    "intent": "greet",
+    "intent_prediction": {
+      "name": "goodbye",
+      "confidence": 0.7768729329109192
+    }
+  },
+  {
+    "text": "medicine did not helped me",
+    "intent": "med_not_helped",
+    "intent_prediction": {
+      "name": "med_helped",
+      "confidence": 0.9651710987091064
+    }
+  },
+  {
+    "text": "cu",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "cold_confirm",
+      "confidence": 0.6774744987487793
+    }
+  },
+  {
+    "text": "yes",
+    "intent": "cold_confirm",
+    "intent_prediction": {
+      "name": "fracture_accepted",
+      "confidence": 0.9999079704284668
+    }
+  },
+  {
+    "text": "good night",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.8504601120948792
+    }
+  },
+  {
+    "text": "have a nice day",
+    "intent": "goodbye",
+    "intent_prediction": {
+      "name": "bot_challenge",
+      "confidence": 0.46146416664123535
+    }
+  },
+  {
+    "text": "ya",
+    "intent": "cold_confirm",
+    "intent_prediction": {
+      "name": "greet",
+      "confidence": 0.5918142795562744
+    }
+  },
+  {
+    "text": "i am not feeling better",
+    "intent": "med_not_helped",
+    "intent_prediction": {
+      "name": "med_helped",
+      "confidence": 0.6862475872039795
+    }
+  },
+  {
+    "text": "medicine helped me",
+    "intent": "med_helped",
+    "intent_prediction": {
+      "name": "med_not_helped",
+      "confidence": 0.9973312616348267
+    }
+  },
+  {
+    "text": "I am feeling weak",
+    "intent": "fever_sym",
+    "intent_prediction": {
+      "name": "med_helped",
+      "confidence": 0.9521925449371338
+    }
+  },
+  {
+    "text": "yes",
+    "intent": "fracture_accepted",
+    "intent_prediction": {
+      "name": "cold_confirm",
+      "confidence": 0.9996771812438965
+    }
+  }
+]
