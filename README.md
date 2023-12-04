@@ -1,4 +1,4 @@
-(-*-)Steps I followed to Get the Project working on Windows 10------------------------------------------------
+*Steps I followed to Get the Project working on Windows 10*------------------------------------------------
 
 1. Go to the directory of the project
 
@@ -16,13 +16,13 @@
 
 8. Wait for both the terminals to finish loading
 
-(-*-)Then after the RASA server and flask app are online.-----------------------------------------------------
+*Then after the RASA server and flask app are online.*-----------------------------------------------------
 
 9. Copy the port on which the app is running (for me it was "http://127.0.0.1:5000/")
 
 10. Open your browser and paste this in the URL
 
-(-*-) Start Chatting------------------------------------------------------------------------------------------
+*Start Chatting*------------------------------------------------------------------------------------------
 
 --------------------------------------------------------------------------------------------------------------
 
@@ -33,4 +33,6 @@
 *I faced an issue with the server,
 the rasa version of the trained model was not compatible with the one I had installed,
 i re-trained the model with the new rasa version and everything was fine*
+
+*Start Chatting*
 --------------------------------------------------------------------------------------------------------------
