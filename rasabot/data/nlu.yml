@@ -1,0 +1,212 @@
+version: "3.1"
+
+nlu:
+  - intent: greet
+    examples: |
+      - hey
+      - hello
+      - hi
+      - hello there
+      - good morning
+      - good evening
+      - moin
+      - hey there
+      - let's go
+      - hey dude
+      - goodmorning
+      - goodevening
+      - good afternoon
+
+  - intent: goodbye
+    examples: |
+      - cu
+      - good by
+      - cee you later
+      - good night
+      - bye
+      - goodbye
+      - have a nice day
+      - see you around
+      - bye bye
+      - see you later
+
+  - intent: bot_challenge
+    examples: |
+      - are you a bot?
+      - are you a human?
+      - am I talking to a bot?
+      - am I talking to a human?
+      - who are you
+
+  - intent: cold
+    examples: |
+      - I have a cough
+      - I have a cold
+
+  - intent: cold_sym
+    examples: |
+      - My nose is choked
+      - My chest is aching
+      - My nose is itching
+      - My throat is itching
+
+  - intent: cold_confirm
+    examples: |
+      - yes i am having cold and cough
+      - yes i am having cold
+      - yes i am having cough
+      - yes
+      - ya
+
+  - intent: med_not_helped
+    examples: |
+      - No, i am still not felling better after having benadryl.
+      - No, i am still not felling better after having crocin.
+      - i am not feeling better
+      - medicine did not helped me
+      - i am not feeling well
+
+  - intent: med_helped
+    examples: |
+      - medicine helped me
+      - i am feeling better now
+      - it was good medicine
+      - feeling good
+      - i am feeling better
+
+  - intent: not_well
+    examples: |
+      - I am not feeling well
+      - i feel sick
+      - i am sick
+      - i am not well
+
+  - intent: well
+    examples: |
+      - i feel fine
+      - i am feeling fine
+      - i feel great
+      - i feel awesome
+
+  - intent: fever_sym
+    examples: |
+      - My body temperature has raised
+      - I am shivering
+      - I am feeling weak
+      - I have weakness in my body
+      - i am having fever
+      - fever
+
+  - intent: fracture_sym
+    examples: |
+      - my hand is aching
+      - my leg is aching
+      - i have pain in hand
+      - my hand is paining
+      - my joint is aching
+
+  - intent: fracture_details
+    examples: |
+      - it is a mild ache
+      - yes there is a swelling
+      - yes there is a physical deformity
+      - yes it is bleeding
+
+  - intent: fracture_accepted
+    examples: |
+      - yes
+      - yes i think it is fracture
+      - yes it is hurting
+      - it is bleeding
+      - blood is coming out
+
+  - intent: headache
+    examples: |
+      - i have a headache
+      - i am having pain in forehead
+      - i have head pain
+      - pain in head
+
+  - intent: migrane
+    examples: |
+      - i have a migrane headache
+      - migrane headache
+      - migrane
+
+  - intent: cluster_headache
+    examples: |
+      - i have a cluster headache
+      - cluster headache
+      - cluster
+
+  - intent: tension_headache
+    examples: |
+      - i have a tension headache
+      - tension headache
+      - tension
+ 
+# below starts the testing of new intents---------------------------------------------------------
+
+  - intent: fun_test
+    examples: |
+      - i want to play
+      - play a game
+      - play time
+
+  - intent: back_pain
+    examples: |
+      - I am experiencing back pain
+      - My lower back hurts
+      - Backache
+      - Pain in the spine
+
+  - intent: allergy_symptoms
+    examples: |
+      - Allergy symptoms
+      - Itchy eyes
+      - Sneezing due to allergies
+      - Allergic reactions
+
+  - intent: skin_rash
+    examples: |
+      - I have a skin rash
+      - Rashes on my skin
+      - Itchy skin
+      - Skin irritation
+
+  - intent: dental_issue
+    examples: |
+      - Toothache
+      - Dental problems
+      - Tooth sensitivity
+      - Gum bleeding
+
+  - intent: respiratory_issue
+    examples: |
+      - Difficulty breathing
+      - Respiratory problems
+      - Shortness of breath
+      - Chest congestion
+
+  - intent: sleep_disorder
+    examples: |
+      - Trouble sleeping
+      - Insomnia
+      - Sleep-related issues
+      - Restless nights
+
+  - intent: vision_issue
+    examples: |
+      - Blurred vision
+      - Eye problems
+      - Vision impairment
+      - Difficulty seeing
+
+  - intent: digestive_problem
+    examples: |
+      - Upset stomach
+      - Indigestion
+      - Digestive issues
+      - Stomach discomfort
+    
+      
