@@ -1,0 +1,82 @@
+Healthcare Chatbot
+
+I downloaded the project files from the link provided
+
+after unzipping the files i followed the "README" to run the model offline on my computer,
+
+after installing all the needed components on to my computer using git bash. 
+
+I tried to run the model but I didnt get any replies from the chatbot
+
+I fixed some issues in the app.py file that didnt link to the right files but the issue prevailed.
+
+I checked for firewall issues but that wasnt the problem
+
+I am getting this error in the Rasabot now
+" Could not load model due to The model version is trained using Rasa Open Source 3.1.0
+ and is not compatible with your current installation which supports models build with Rasa Open Source 3.5.0 or higher.
+ This means that you either need to retrain your model or revert back to the Rasa version that trained the model to ensure that the versions match up again.."
+
+i have two possible sollution to this problem
+1 is to downgrade to the required version
+2 is to retrain the model
+
+i am retrainig the model first
+
+the chat bot is finally working after retraining it in the new version of rasa
+------------------------------------------------------------------------------------------------------------
+To Start using
+Step1: open gitbash in rasabot directory and run the command : rasa run -m models --endpoints endpoints.yml --port 5002 --credentials credentials.yml
+Step2: open new gitbash in web_app directory and rub command : flask run
+Step3: open a brower and open : http://127.0.0.1:5000/ (shows the link in the bash terminal)
+------------------------------------------------------------------------------------------------------------
+
+i am now testing out the bot by having some conversations
+
+the chatbot is working fine even after restarting the computer and servers
+
+but it has limitations in the number of topics it can answer, for eg it gives the same answer
+for all kinds of aches like headache and stomach ache, mostly because of the training data
+
+I start analising all the files in the project to understand how it works
+
+i found 3 files in the ..rasabot/data directory with extension .yml ,
+
+I started searching about RASA , it is a tool for building conversational AI in other words chat bots,
+turns out there are many ways of building chatbots and this project uses intents and actions
+
+i did some modifications to the "nlu.yml" and "domain.yml" files and started training the rasabot on the new data.
+
+i tried  testing to get the reply according to the modified data but didnt get any replies
+
+i will have to retrain the model after modifying the stories.yml file
+
+i added a new story path, named it story-time_path, the intent is fun_test and the action is start_playing
+got an error "Encountered an exception while running action 'start_playing'.Bot will continue, 
+but the actions events are lost. Please check the logs of your action server for more information."
+
+looks like i need to change a few more files
+
+I started modifying the existing index.html, index.css, index.js files to give the chatbot a more apealing front end
+
+i started by changong the html file and adding the needed areas to it
+
+then i modified the css file to suit the style for the healthcare website 
+
+i then tested the working of the new webpage and fixed the new bugs that had arrised due to the modifications of the files
+
+in the end the webpage was workin as i intended
+
+i tested by changing the action name from start_playing to utter_start_playing and the new custom case works
+
+i am finding ways to figure out ways to test the accuracy of a chatbot
+
+after some research i found a command that can help with that for rasa
+
+modified the data files(nlu,domain,stories) to now support multiple new responces and symptoms
+
+i re-trained the model with the new data
+
+after the training was done , i tested the accuracy of the model by running the rasa test command
+
+after that was done i tested the working of the bot with the new responses and it worked perfectly

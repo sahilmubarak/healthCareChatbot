@@ -1,0 +1,57 @@
+Documentation: Healthcare Chatbot
+
+Overview
+This documentation provides a comprehensive overview of the development, troubleshooting, and enhancements made to the Healthcare Chatbot project.
+The focus spans from the initial setup to addressing challenges, improving accuracy, and refining the front end.
+
+Setup and Troubleshooting
+
+1. Project Initialization:
+   - Downloaded project files and followed README for offline model deployment.
+   - Installed necessary components using Git Bash.
+
+2. Initial Challenges:
+   - Encountered issues with file linking in `app.py`.
+   - Resolved linking problems to ensure proper functionality.
+
+3. Version Compatibility:
+   - Faced compatibility issues with Rasa versions (3.1.0 vs. 3.5.0 or higher).
+   - Options considered: downgrading or retraining the model.
+
+4. Retraining the Model:
+   - Opted to retrain the model to align with Rasa Open Source 3.5.0.
+   - Successfully resolved compatibility issues.
+
+5. Launching the Chatbot:
+   - Utilized Git Bash to start Rasa server and Flask for the web application.
+   - Opened the chatbot in the browser using the provided URL.
+
+Accuracy and Functionality Enhancements
+
+6. Limitations Identification:
+   - Identified limitations in topic coverage, especially for aches like headaches and stomachaches.
+
+7. Data Analysis and Modification:
+   - Analyzed project files, including `rasabot/data` with .yml files.
+   - Explored Rasa's use of intents and actions in building chatbots.
+
+8. Training and Testing:
+   - Modified `nlu.yml` and `domain.yml` for enriched training data.
+   - Introduced new story path ('story-time_path') with 'fun_test' intent and 'start_playing' action.
+
+9. Front-End Refinement:
+   - Modified `index.html`, `index.css`, and `index.js` for an improved and appealing front end.
+   - Fixed bugs arising from file modifications to ensure smooth webpage functionality.
+
+10. Accuracy Testing:
+    - Investigated accuracy testing options in Rasa.
+    - Modified data files to support multiple new responses and symptoms.
+    - Retrained the model with the updated data.
+
+11. Validation and Conclusion:
+    - Tested model accuracy using the Rasa test command.
+    - Verified chatbot functionality with the new responses, ensuring improved accuracy.
+
+Conclusion
+The Healthcare Chatbot project has undergone significant improvements, overcoming initial setup challenges, ensuring version compatibility, refining accuracy, and enhancing the front-end user experience.
+The chatbot is now more robust, versatile, and accurate in addressing a broader range of health-related inquiries.
