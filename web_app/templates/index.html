@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" type="text/css" href="../static/index.css" />
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+</head>
+<body>
+    <div class="container">
+        <!-- Info Area (Left Column) -->
+        <div class="info-area">
+            <!-- Place your info content here -->
+            <h2>Disclaimer:</h2>
+            <p>This chatbot provides general health information and support, but it is not a substitute for professional medical advice.
+               Consult a qualified healthcare professional for personalized guidance. In emergencies, seek immediate medical assistance.
+                The chatbot's responses are based on predefined data and may not cover all conditions. 
+                Use this service responsibly and avoid sharing sensitive personal information.</p>
+            <p>By using this healthcare chatbot, you acknowledge that it is not a replacement for professional medical advice. 
+              If you have specific health concerns, consult with a qualified healthcare professional.</p>
+        </div>
+        
+        <!-- Chat Area (Rest of the Screen) -->
+        <div class="chat-area">
+            <h1 class="heading">Healthcare Chatbot Build using rasa</h1>
+            <div id="chatbox" class="messages-content">
+                <!-- Existing chatbox content goes here -->
+                <p class="botText">
+                    <span>Please try typing full sentences as I am still learning!</span>
+                </p>
+                <p class="botText">
+                    <span>I am your Health assistant.</span>
+                </p>
+                <p class="botText">
+                    <span>Hi There! How can I help you? What symptoms are you facing?</span>
+                </p>
+            </div>
+            <div class="user-input" id="userInput">
+                <input id="textInput" type="text" name="msg" placeholder="Message" />
+                <input id="buttonInput" type="submit" value="Send" />
+            </div>
+        </div>
+    </div>
+    <script>
+       function scrollToBottom() {
+            var $messages = $(".messages-content");
+            $messages.scrollTop($messages[0].scrollHeight);
+        }
+
+        function appendMessage(sender, message) {
+            var $chatbox = $("#chatbox");
+            var $newMessage = $('<p class="' + sender + 'Text"><span>' + message + '</span></p>');
+
+            $chatbox.append($newMessage);
+            scrollToBottom();
+        }
+
+        function getBotResponse() {
+    var rawText = $("#textInput").val();
+    var userHtml = '<p class="userText"><span>' + rawText + "</span></p>";
+    $("#textInput").val("");
+
+    // Append user message
+    $("#chatbox").append(userHtml);
+
+    // Scroll to bottom
+    scrollToBottom();
+
+    // Fetch bot response from the server
+    $.get("/get", { msg: rawText }).done(function (data) {
+        // Use the actual bot response received from the server
+        var botHtml = '<p class="botText"><span>' + data + '</span></p>';
+
+        // Append bot message
+        $("#chatbox").append(botHtml);
+
+        // Scroll to bottom after appending the bot message
+        scrollToBottom();
+    });
+}
+        $("#textInput").keypress(function (e) {
+            if (e.which == 13) {
+                getBotResponse();
+            }
+        });
+
+        $("#buttonInput").click(function () {
+            getBotResponse();
+        });
+    </script>
+</body>
+</html>
